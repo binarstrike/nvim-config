@@ -23,8 +23,8 @@ local key_bindings = {
   {
     mode = { "i", "n" },
     mappings = {
-      ["<C-z>"] = { "g-", opts = { desc = "Undo" } },
-      ["<C-y>"] = { "g+", opts = { desc = "Redo" } },
+      ["<C-z>"] = { cmd "undo", opts = { desc = "Undo" } },
+      ["<C-y>"] = { cmd "redo", opts = { desc = "Redo" } },
     },
   },
   {

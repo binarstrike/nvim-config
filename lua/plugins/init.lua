@@ -30,4 +30,13 @@ return {
       require("tabout").setup(opts)
     end,
   },
+  { "wakatime/vim-wakatime", lazy = false },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = require "configs.toggleterm-nvim",
+    event = "VeryLazy",
+    config = function(_, opts)
+      require("toggleterm").setup(opts)
+    end,
+  },
 }
