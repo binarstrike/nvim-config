@@ -31,12 +31,12 @@ local key_bindings = {
     mode = { "v", "n" },
     mappings = {
       ["<leader><Tab>"] = { cmd "tabnext", opts = { desc = "Next tab" } },
+      ["<leader>ee"] = { cmd "NvimTreeToggle", opts = { desc = "Toggle NvimTree" } },
     },
   },
 }
 
-for i in ipairs(key_bindings) do
-  local keymap = key_bindings[i]
+for _, keymap in pairs(key_bindings) do
   for k, m in pairs(keymap["mappings"]) do
     vim.keymap.set(keymap["mode"], k, m[1], m["opts"])
   end

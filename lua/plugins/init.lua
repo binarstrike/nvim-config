@@ -25,9 +25,9 @@ return {
   {
     "abecodes/tabout.nvim",
     lazy = false,
-    opts = require "configs.tabout-nvim",
-    config = function(_, opts)
-      require("tabout").setup(opts)
+    -- opts = require "configs.tabout-nvim",
+    config = function()
+      require("tabout").setup()
     end,
   },
   { "wakatime/vim-wakatime", lazy = false },
